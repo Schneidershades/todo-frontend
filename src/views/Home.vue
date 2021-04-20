@@ -8,7 +8,7 @@
      </div>
    </form>
     <ul class="todoList">
-      <li v-for="list in lists">
+      <li v-for="list in lists" :key="list.id">
         <template v-if="list.complete==false">
           <a @click="completeTodo(list.id)">{{list.todo}}</a> 
           <button class="delete" @click="removeTodo(list.id)"><i class="fas fa-plus"></i>Delete</button>
