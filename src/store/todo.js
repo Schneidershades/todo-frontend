@@ -30,22 +30,23 @@ export default {
 		async getTodos ({ commit }) {
 			let response = await axios.get('/api/todos')
 			commit( 'PUSH_TODO', response.data )
+			return response
 		},
 
 		async postTodos ({ dispatch }, item) {
-			let response = await axios.post('/api/todos', item)
+			await axios.post('/api/todos', item)
 			dispatch( 'getTodos' )
 		},
 
 		async completeTodos ({ dispatch }, id) {
 			const url = '/api/todos/' + id
-			let response = await axios.put(url)
+			await axios.put(url)
 			dispatch( 'getTodos' )
 		},
 
 		async removeTodos ({ dispatch }, id) {
 			const url = '/api/todos/' + id
-			let response = await axios.delete(url)
+			await axios.delete(url)
 			dispatch( 'getTodos' )
 		}
 	}
