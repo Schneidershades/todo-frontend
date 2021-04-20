@@ -3,9 +3,9 @@ import axios from 'axios'
 
 axios.defaults.withCredentials = true
 
-// axios.defaults.baseURL = 'https://api.parkit.ng'
-
 axios.defaults.baseURL = 'https://todoback123.herokuapp.com/'
+
+// axios.defaults.baseURL = 'http://localhost:8000/'
 
 export default {
 	namespaced: true,
