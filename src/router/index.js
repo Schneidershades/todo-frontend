@@ -4,12 +4,12 @@ import Pin from '../views/Pin.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: Home
   },
   {
-    path: '/pin',
+    path: '/',
     name: 'Pin',
     component: Pin
   },

@@ -29,14 +29,12 @@ export default {
 	actions : {
 		async getPins ({ commit }) {
 			let response = await axios.get('/api/pins')
-			console.log(response.data)
 			commit( 'PUSH_PIN', response.data )
 			return response
 		},
 
 		async postPins ({ commit }) {
 			let response = await axios.post('/api/pins')
-			console.log(response.data)
 			commit( 'PUSH_PIN', response.data )
 			return response
 		},
