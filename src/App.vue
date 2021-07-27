@@ -59,7 +59,7 @@ body{
   border-color: #bcc7e4;
 }
 .inputField button{
-  width: 50px;
+  width: 150px;
   height: 100%;
   border: none;
   color: #fff;

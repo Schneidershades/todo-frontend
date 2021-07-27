@@ -1,6 +1,7 @@
 import { createStore } from 'vuex'
 
 import todo from './todo'
+import pin from './pin'
 
 export default createStore({
 	state: {
@@ -11,5 +12,6 @@ export default createStore({
 	},
 	modules: {
 		todo,
+		pin,
 	}
 })
