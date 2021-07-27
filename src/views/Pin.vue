@@ -1,12 +1,13 @@
 <template>
 	<div class="wrapper flex">
-		<h1 class="header">Generated Pins</h1>
     <form @submit.prevent="submitPin">
       <div class="inputField">
        <!-- <input v-model="form.todo" type="text" required="" placeholder="What needs to be done?"> -->
        <button type="submit" :disabled="disabled"><i class="fas fa-plus"></i>Generate</button>
      </div>
    </form>
+   
+    <h1 class="header">Generated Pins</h1>
     <ul class="todoList">
       <li v-for="list in lists" :key="list.id">
         <span >{{list.pin}} </span> 
